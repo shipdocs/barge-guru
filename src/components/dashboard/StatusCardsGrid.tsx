@@ -76,7 +76,11 @@ const StatusCardsGrid = ({
                   </div>
                   <p className="text-sm opacity-80">{card.description}</p>
                 </div>
-                <Badge variant={card.variant}>
+                <Badge
+                  variant={
+                    card.variant === "warning" ? "secondary" : card.variant
+                  }
+                >
                   {card.count > 0 ? "Active" : "Clear"}
                 </Badge>
               </div>
